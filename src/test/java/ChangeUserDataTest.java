@@ -41,7 +41,7 @@ public class ChangeUserDataTest {
     public void checkChangeEmailWithAuthorization() {
         User userUpdate = user.clone();
         userUpdate.setEmail(RandomStringUtils.randomAlphabetic(8) + "@newpraktikum.ru");
-        String token = userPage.createUser(user).extract().header("Authorization");
+        token = userPage.createUser(user).extract().header("Authorization");
         userPage.updateUser(token, userUpdate);
         ValidatableResponse response = userPage.getUserInfo(token);
         response.body("user.name", equalTo(user.getName())).and().body("user.email", equalTo(userUpdate.getEmail().toLowerCase()));

@@ -8,9 +8,6 @@ public class LoginUser {
         this.email = email;
         this.password = password;
     }
-//    public static LoginUser from(User user) {
-//        return new LoginUser(user.getEmail(), user.getPassword());
-//    }
     public String getEmail() {
         return email;
     }
