@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Resources;
 
 public class LoginUser {
     private String email;
@@ -8,6 +8,7 @@ public class LoginUser {
         this.email = email;
         this.password = password;
     }
+
     public String getEmail() {
         return email;
     }
