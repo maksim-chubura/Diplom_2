@@ -80,5 +80,10 @@ public class OrderTest extends BaseTest {
         ValidatableResponse validatableResponse = userPage.createOrderOne(token, newIngredients)
                 .assertThat().statusCode(HttpStatus.SC_BAD_REQUEST);
         userPage.checkCorrectStatusCodeAndBody(validatableResponse, false, "One or more ids provided are incorrect");
+    /*
+    при создании заказа, не выдает статус 500, только 400.
+    В Postman так же выдает статус 400, при указании неверного хэша ингредиентов
+    В файле word приложил скрин из Postman
+    */
     }
 }
