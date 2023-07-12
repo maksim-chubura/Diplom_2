@@ -1,8 +1,8 @@
-package Base;
+package base;
 
-import org.example.Resources.User;
-import org.example.Resources.UserGenerator;
-import org.example.Steps.UserPage;
+import org.example.resources.User;
+import org.example.resources.UserGenerator;
+import org.example.steps.UserPage;
 import org.junit.After;
 import org.junit.Before;
 

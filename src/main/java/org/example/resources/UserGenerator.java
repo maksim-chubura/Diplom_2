@@ -1,7 +1,6 @@
-package org.example.Resources;
+package org.example.resources;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.example.Resources.User;
 
 public class UserGenerator {
     public static User random() {

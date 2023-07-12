@@ -1,4 +1,4 @@
-package org.example.Resources;
+package org.example.resources;
 
 import java.util.List;
 

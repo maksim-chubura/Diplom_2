@@ -1,11 +1,11 @@
-package org.example.Steps;
+package org.example.steps;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import org.example.Constants.PathApi;
-import org.example.Resources.Ingredients;
-import org.example.Resources.LoginUser;
-import org.example.Resources.User;
+import org.example.page_constants.Constants;
+import org.example.resources.Ingredients;
+import org.example.resources.LoginUser;
+import org.example.resources.User;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -16,7 +16,7 @@ public class UserPage extends BaseApi {
         return given(RequestSpecification())
                 .body(user)
                 .when()
-                .post(PathApi.CREATE_USER)
+                .post(Constants.CREATE_USER)
                 .then().log().all();
     }
 
@@ -25,7 +25,7 @@ public class UserPage extends BaseApi {
         return given(RequestSpecification())
                 .body(loginUser)
                 .when()
-                .post(PathApi.LOGIN_USER)
+                .post(Constants.LOGIN_USER)
                 .then().log().all();
     }
 
@@ -34,7 +34,7 @@ public class UserPage extends BaseApi {
         return given(RequestSpecification())
                 .header("Authorization", accessToken)
                 .when()
-                .delete(PathApi.DELETE_USER)
+                .delete(Constants.DELETE_USER)
                 .then().log().all();
     }
 
@@ -44,7 +44,7 @@ public class UserPage extends BaseApi {
                 .header("Authorization", accessToken)
                 .body(user)
                 .when()
-                .patch(PathApi.PATCH_USER)
+                .patch(Constants.PATCH_USER)
                 .then().log().all();
     }
 
@@ -53,7 +53,7 @@ public class UserPage extends BaseApi {
         return given(RequestSpecification())
                 .header("Authorization", accessToken)
                 .when()
-                .get(PathApi.GET_INFO_USER)
+                .get(Constants.GET_INFO_USER)
                 .then().log().all();
     }
 
@@ -71,7 +71,7 @@ public class UserPage extends BaseApi {
                 .header("Authorization", accessToken)
                 .body(ingredients)
                 .when()
-                .post(PathApi.CREATE_ORDER)
+                .post(Constants.CREATE_ORDER)
                 .then().log().all();
     }
 
@@ -80,7 +80,7 @@ public class UserPage extends BaseApi {
         return given(RequestSpecification())
                 .when()
                 .body(ingredients)
-                .post(PathApi.CREATE_ORDER)
+                .post(Constants.CREATE_ORDER)
                 .then().log().all();
     }
 
@@ -89,7 +89,7 @@ public class UserPage extends BaseApi {
         return given(RequestSpecification())
                 .header("Authorization", accessToken)
                 .when()
-                .get(PathApi.GET_ORDER_USER)
+                .get(Constants.GET_ORDER_USER)
                 .then().log().all();
     }
 
@@ -97,7 +97,7 @@ public class UserPage extends BaseApi {
     public ValidatableResponse getOrderWithoutLogIn() {
         return given(RequestSpecification())
                 .when()
-                .get(PathApi.GET_ORDER_USER)
+                .get(Constants.GET_ORDER_USER)
                 .then().log().all();
     }
 }

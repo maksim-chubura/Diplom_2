@@ -1,4 +1,4 @@
-package org.example.Steps;
+package org.example.steps;
 
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;

@@ -1,6 +1,6 @@
-package org.example.Constants;
+package org.example.page_constants;
 
-public class PathApi {
+public class Constants {
     public static final String CREATE_USER = "/api/auth/register";
     public static final String LOGIN_USER = "/api/auth/login";
     public static final String PATCH_USER = "/api/auth/user";

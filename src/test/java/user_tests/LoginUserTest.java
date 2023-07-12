@@ -1,11 +1,11 @@
-package UserTests;
+package user_tests;
 
-import Base.BaseTest;
+import base.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
-import org.example.Resources.LoginUser;
+import org.example.resources.LoginUser;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;

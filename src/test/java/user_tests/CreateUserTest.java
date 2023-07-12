@@ -1,6 +1,6 @@
-package UserTests;
+package user_tests;
 
-import Base.BaseTest;
+import base.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;

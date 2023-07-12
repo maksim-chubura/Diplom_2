@@ -1,4 +1,4 @@
-package org.example.Resources;
+package org.example.resources;
 
 public class LoginUser {
     private String email;
